@@ -12,6 +12,11 @@
 #import <Foundation/Foundation.h>
 #import "SUExport.h"
 
+// NOTE: safe to remove when dropping 10.7 support
+#ifndef NS_ENUM
+#define NS_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
+#endif
+
 /**
  * Error domain used by Sparkle
  */
